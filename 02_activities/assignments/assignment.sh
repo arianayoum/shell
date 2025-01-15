@@ -48,7 +48,7 @@ cd ../
 find . -name '*ipaddr*' -delete
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-ls processed > inventory.txt
+find processed/ -type f -name "*.log" -exec basename {} \; > inventory.txt
 
 
 ###########################################
